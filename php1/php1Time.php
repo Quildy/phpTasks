@@ -23,13 +23,17 @@ function timeCheck()
         $hour = " час ";
     }
     
-    if (date("i") % 10 == 1)
+    if (date("1") % 10 == 1)
     {
         $minutes = " минута";
     }
-    elseif (date("i") % 10 >= 2 && date("i") % 10 <= 4)
+    elseif (date("i") > 5 && date("i") < 20)
     {
-        $minutes = " минуты";
+        $minutes = " минут ";
+    }
+    elseif (date("i") > 5 && date("i") < 20)
+    {
+        $minutes = " минут ";
     }
     else
     {
