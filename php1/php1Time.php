@@ -31,9 +31,9 @@ function timeCheck()
     {
         $minutes = " минут ";
     }
-    elseif (date("i") > 5 && date("i") < 20)
+    elseif (date("i") % 10 >= 2 && date("i") % 10 <= 4)
     {
-        $minutes = " минут ";
+        $minutes = " минуты";
     }
     else
     {
