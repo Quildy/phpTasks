@@ -1,5 +1,5 @@
 <?php
-$tittleName = "Актуальное Время";
+$tittleName = "Актуальное время";
 $h1Text = "Отображение текущего времени";
 $h2Text = "Сейчас: ";
 
@@ -7,14 +7,15 @@ $result = timeCheck();
 
 function timeCheck()
 {
+    date_default_timezone_set('Asia/Yekaterinburg');
     $hour = "Часы"; // date("H")
     $minutes = "Минуты"; // date("i")
-    if (date("H") == 0 || (date("H") >= 5 && date("H")<=20))
+    if (date("H") == 0 || (date("H") >= 5 && date("H") <= 20))
     {
         $hour = " часов ";
     }
-    elseif ((date("H") >= 2 && date("H")<= 4) || date("H") == 22 || date("H") 
-        == 23)
+    elseif ((date("H") >= 2 && date("H") <= 4) || date("H") == 22
+        || date("H") == 23)
     {
         $hour = " часа ";
     }
@@ -22,14 +23,14 @@ function timeCheck()
     {
         $hour = " час ";
     }
-    
-    if (date("1") % 10 == 1)
-    {
-        $minutes = " минута";
-    }
-    elseif (date("i") > 5 && date("i") < 20)
+
+    if (date("i") > 5 && date("i") < 20)
     {
         $minutes = " минут ";
+    }
+    elseif (date("i") % 10 == 1)
+    {
+        $minutes = " минута";
     }
     elseif (date("i") % 10 >= 2 && date("i") % 10 <= 4)
     {
@@ -39,7 +40,7 @@ function timeCheck()
     {
         $minutes = " минут";
     }
-    return date("H") + 2 . $hour . date("i") . $minutes;
+    return date("H") . $hour . date("i") . $minutes;
 }
 ?>
 
