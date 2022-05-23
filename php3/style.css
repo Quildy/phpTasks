@@ -1,0 +1,23 @@
+body
+{
+    background: radial-gradient(#EECFBA, #C5DDE8);
+}
+
+h1
+{
+    font-style: italic;
+    color: brown;
+    font-size: 40px;
+    text-align: center;
+}
+
+img
+{
+    width: 370px;
+    height: 350px;
+    border: 1px solid black;
+    margin: 1% 1% 1% 4%;
+    -webkit-box-shadow: 2px 1px 25px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 1px 25px -5px rgba(0,0,0,0.75);
+    box-shadow: 2px 1px 25px -5px rgba(0,0,0,0.75);
+}
