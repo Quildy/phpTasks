@@ -1,0 +1,12 @@
+@import "assets/style/index.css";
+@import "assets/style/list-items.css";
+
+body {
+    margin: 0;
+}
+
+html {
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    font-size: 16px;
+}
+
