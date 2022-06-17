@@ -12,6 +12,12 @@ while ($row = mysqli_fetch_assoc($result))
 {
     $catalogItem[] = $row;
 }
+
+if(empty($catalogItem))
+{
+    header("Location: http://phpfive:8080/");
+    exit();
+}
 ?>
 
 <!doctype html>
